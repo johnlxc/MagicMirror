@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
         date = date[0] + ' ' + date[1] + ' ' + date[2] + ' ' + date[3];
 
 		$('.date').html(date);
-		$('.time').html(now.format('HH') + ':' + now.format('mm') + '<span class="sec">'+now.format('ss')+'</span>');
+		$('.time').html(now.format('hh') + ':' + now.format('mm') + '<span class="sec">'+now.format('ss')+'</span>');
 
 		setTimeout(function() {
 			updateTime();
@@ -142,7 +142,7 @@ jQuery(document).ready(function($) {
         		}
         	};
         	eventList.sort(function(a,b){return a.seconds-b.seconds});
-
+		eventList = eventList.slice(1,10);
         	setTimeout(function() {
         		updateCalendarData();
         	}, 60000);
@@ -153,7 +153,6 @@ jQuery(document).ready(function($) {
 	{
 		table = $('<table/>').addClass('xsmall').addClass('calendar-table');
 		opacity = 1;
-
 
 		for (var i in eventList) {
 			var e = eventList[i];
@@ -297,7 +296,7 @@ jQuery(document).ready(function($) {
 
 	(function fetchNews() {
 		$.feedToJson({
-			feed:'http://feeds.nos.nl/nosjournaal?format=rss',
+			feed:'http://feeds.arstechnica.com/arstechnica/index?format=rss',
 			//feed:'http://www.nu.nl/feeds/rss/achterklap.rss',
 			//feed:'http://www.nu.nl/feeds/rss/opmerkelijk.rss',
 			success: function(data){
