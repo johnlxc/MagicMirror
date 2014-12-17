@@ -21,5 +21,7 @@ var compliments = [
             'You look nice!',
             'Enjoy your day!',
 	    'All Hail John',
-	    'Praise John Everyday'
+	    'Praise John Everyday',
+        'Coffee, Five C!',
+        'Show me the boobies'
         ];
