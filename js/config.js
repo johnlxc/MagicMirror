@@ -5,7 +5,7 @@ var lang = 'en';
 
 //change weather params here:
 var weatherParams = {
-    'q':'Chicago,USA',
+    'q':'Normal,USA',
     'units':'imperial',
     'lang':lang
 };
@@ -23,5 +23,6 @@ var compliments = [
 	    'All Hail John',
 	    'Praise John Everyday',
         'Coffee, Five C!',
-        'Show me the boobies'
+        'Show me them boobies',
+        'Who does Number 2 work for?'
         ];
